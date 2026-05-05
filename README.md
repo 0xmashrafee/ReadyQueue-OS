@@ -139,16 +139,13 @@ That is it. The ReadyQueue window will open maximized with 4 sample processes al
 9. When you are done, click Export PDF Report to save everything as a PDF
 
 ---
+
 ## Screenshots
 
-![Gantt Chart](<img width="1276" height="495" alt="image" src="https://github.com/user-attachments/assets/86f036ba-af96-46a8-947e-d30e123d3138" />
-)
-![Comparison Tab](<img width="2556" height="702" alt="image" src="https://github.com/user-attachments/assets/16cfeec2-8401-4345-bd26-5a129a1d15df" />
-)
-![Deadlock Demo](<img width="909" height="623" alt="image" src="https://github.com/user-attachments/assets/2b21f485-1dad-4532-b23e-0214d217bdc5" />
-)
-![PDF Export](<img width="1915" height="1285" alt="image" src="https://github.com/user-attachments/assets/d2c21176-a787-4592-9862-fba5fe322872" />
-)
+![Gantt Chart](screenshots/gantt.png)
+![Comparison](screenshots/comparison.png)
+![Deadlock](screenshots/deadlock.png)
+![PDF Export](screenshots/pdf_export.png)
 
 ## If something is not working?
 
