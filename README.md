@@ -140,12 +140,7 @@ That is it. The ReadyQueue window will open maximized with 4 sample processes al
 
 ---
 
-## Screenshots
 
-![Gantt Chart](screenshots/gantt.png)
-![Comparison](screenshots/comparison.png)
-![Deadlock](screenshots/deadlock.png)
-![PDF Export](screenshots/pdf_export.png)
 
 ## If something is not working?
 
