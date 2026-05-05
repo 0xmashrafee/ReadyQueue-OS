@@ -1,163 +1,122 @@
 ReadyQueue — CPU Process Scheduler & Sync Visualizer
-A desktop app that visualizes CPU scheduling algorithms and OS sync concepts in real time. Built with Python + tkinter from scratch.
-Built with **Python** and **tkinter** — no web framework, no game engine, just pure Python.
+
+I built this because I was tired of drawing Gantt charts by hand.
+Now you can just type in your processes, pick an algorithm, and watch it run.
+
+Built with Python and tkinter — no frameworks, no extra installations, just pure Python.
+
+
+## Demo Video
+
+**[Watch it in action](YOUR_YOUTUBE_LINK_HERE)**
+
 
 ---
 
-## 📽️ Demo Video
+## What is this exactly?
+
+You know how in OS class you have to manually draw Gantt charts and calculate waiting times by hand? This app does all of that for you — but animated, step by step, so you can actually see what the algorithm is doing and why.
+
+You type in your processes, pick an algorithm like FCFS or Round Robin, hit Run, and the app draws the Gantt chart live while calculating all the metrics automatically.
+
+But it does more than just scheduling. There is also a whole Synchronization tab where you can watch a Deadlock form in real time, see a Race Condition happen live, and understand Mutex locks and Producer/Consumer with actual animations — not just text descriptions.
+
+And if you want to know which algorithm is best for your processes, the Comparison tab runs all of them at once and picks a winner.
 
 
+## What can it do?
 
-**[▶ Watch Demo Video](YOUR_YOUTUBE_LINK_HERE)**
+### Scheduler Tab
 
-<!-- To add: upload a screen recording to YouTube, then replace YOUR_YOUTUBE_LINK_HERE with your video URL -->
+| Feature | What it does |
 
----
-
-## 📌 What Is This?
-
-Most OS students learn scheduling algorithms by drawing Gantt charts by hand — slow and confusing. **ReadyQueue** fixes that.
-
-You type in a list of processes, pick a scheduling algorithm, and press **Run**. The app:
-
-- Draws an **animated Gantt chart** frame by frame
-- Calculates **waiting time, turnaround time, CPU utilization** and more
-- Explains **WHY** each scheduling decision was made, in plain English
-- Shows **synchronization problems** like Deadlock and Race Condition — animated live
-- Compares **all algorithms at once** and tells you which one performed best
-
----
-
-## ✨ Features
-
-### ⚡ Scheduler Tab
-| Feature | Description |
-|--------|-------------|
 | 6 Scheduling Algorithms | FCFS, SJF, SRTF, Round Robin, Priority, Priority + Aging |
-| Animated Gantt Chart | Live frame-by-frame animation with playhead |
-| Step-by-Step Explainer | Explains WHY each process was picked at every step |
-| Starvation Detection | Red warning banner when a process waits too long |
-| Process Metrics Table | Waiting time, turnaround, response time per process |
-| Summary Cards | Avg wait, CPU utilization, throughput, context switches |
-| Priority Aging | Automatically boosts waiting processes to prevent starvation |
+| Animated Gantt Chart | Draws the chart live, frame by frame, as the simulation plays |
+| Step-by-Step Explainer | Click Next Step, and it tells you exactly WHY that process was picked |
+| Starvation Detection | Shows a red warning when a process has been waiting too long |
+| Metrics Table | Shows waiting time, turnaround time, and response time for every process |
+| Summary Cards | Avg wait time, CPU utilization, throughput, context switches — all in one glance |
+| Priority Aging | Automatically boosts low-priority processes so they never wait forever |
 
-### ⚖️ Comparison Tab
-| Feature | Description |
-|--------|-------------|
-| Run All Algorithms | Runs all 5 algorithms on your processes simultaneously |
-| Winner Detection | 🏆 Trophy marks the best-performing algorithm |
-| Bar Charts | Visual comparison of wait time, turnaround, CPU utilization |
+### Comparison Tab
 
-### 🔒 Synchronization Tab
-| Feature | Description |
+| Feature | What it does |
 |--------|-------------|
-| Mutex Lock Demo | 3 threads competing for a shared lock — animated |
-| Producer / Consumer | Bounded buffer with semaphores — fills and empties live |
-| Deadlock Demo | Circular wait forming and detected in real time |
-| Race Condition Demo | Lost updates from unsynchronized threads |
-| Event Log | Colour-coded log of every sync event with timestamps |
+| Run All at Once | Runs all 5 algorithms on your processes at the same time |
+| Winner Detection | Puts a trophy on the best performing algorithm |
+| Bar Charts | Shows the difference visually — not just numbers |
 
-### 💾 Global Features
-| Feature | Description |
+### Synchronization Tab
+
+| Feature | What it does |
 |--------|-------------|
-| Save & Load | Save process sets to `.json` and reload anytime |
-| Export PDF | One-click professional PDF report with Gantt chart + metrics |
-| Resizable Layout | Drag dividers to resize Gantt, Explainer, and Metrics panels |
-| Live Clock | Updates every second in the top bar |
-| Status Bar | Shows what the app is doing at all times |
-| Dark Theme | Deep navy + electric cyan branded interface |
+| Mutex Lock Demo | Watch 3 threads fight over a lock — see who gets blocked and who gets in |
+| Producer / Consumer | A buffer fills up and empties live with semaphore logic |
+| Deadlock Demo | Watch two threads get stuck waiting on each other — circular wait animated |
+| Race Condition | See what happens when two threads write at the same time without sync |
+| Event Log | Every event logged with timestamps and colour coding |
+
+### Works Everywhere
+
+| Feature | What it does |
+|--------|-------------|
+| Save & Load | Save your process list to a file and reload it anytime |
+| Export PDF | One click to get a full professional report — Gantt chart, metrics, everything |
+| Resizable Panels | Drag the dividers to make any section bigger or smaller |
+| Live Clock | Shows the current time in the top bar, updates every second |
+| Status Bar | Always tells you what the app is doing right now |
+| Dark Theme | Deep navy background with electric cyan — looks clean |
 
 ---
 
-## 🖼️ Screenshots
-
-<!-- Add screenshots after taking them from your app -->
-<!-- Drag and drop images into this section on GitHub, or use the format below -->
-
-```
-Screenshot 1 — Gantt Chart (FCFS)
-Screenshot 2 — Comparison Tab
-Screenshot 3 — Deadlock Demo
-Screenshot 4 — PDF Export
-```
-
-<!-- Example format once you have images:
-![Gantt Chart](screenshots/gantt.png)
-![Comparison](screenshots/comparison.png)
--->
-
----
-
-## 🧠 OS Concepts Covered
-
-This project demonstrates the following Operating System concepts:
-
-- CPU Scheduling (FCFS, SJF, SRTF, Round Robin, Priority)
-- Gantt Charts, Burst Time, Arrival Time, Priority
-- Waiting Time, Turnaround Time, Response Time
-- Preemptive vs Non-Preemptive Scheduling
-- Context Switching, CPU Utilization, Throughput
-- Starvation and Priority Aging
-- Convoy Effect, Time Quantum
-- Mutex Lock, Semaphore, Bounded Buffer
-- Deadlock and Coffman Conditions
-- Race Condition and Critical Section
-- Process Control Block (PCB)
-
----
-
-## 📁 Project Structure
+## Files in this project
 
 ```
 ReadyQueue/
 │
-├── main.py          # Main app — all UI, animation, and tkinter code
-├── process.py       # Process data model (like a real OS PCB)
-├── scheduler.py     # All 6 scheduling algorithm implementations
-├── sync_demo.py     # Mutex, semaphore, deadlock, race condition simulations
-├── explainer.py     # Generates plain-English step explanations
-├── pdf_export.py    # Builds the PDF report using reportlab
-└── README.md        # This file
+├── main.py          # The whole UI and animation — this is what you run
+├── process.py       # Defines what a process is (like a PCB in a real OS)
+├── scheduler.py     # All 6 scheduling algorithms live here
+├── sync_demo.py     # The mutex, deadlock, semaphore, and race condition logic
+├── explainer.py     # Figures out WHY each scheduling decision was made
+├── pdf_export.py    # Builds the PDF report
+└── README.md        # You are here
 ```
 
 ---
 
-## 🚀 How to Run
+## How to run it
 
-### Step 1 — Make sure Python is installed
+Don't worry — it is easier than it looks. Just follow these steps one by one.
 
-Open **Command Prompt** and type:
+### Step 1 — Check if Python is installed
+
+Open Command Prompt (press Win + R, type cmd, hit Enter) and type:
 
 ```bash
 python --version
 ```
 
-You should see something like `Python 3.x.x`. If not, download Python from [python.org](https://python.org/downloads) — make sure to check **"Add Python to PATH"** during install.
+If you see Python 3. x.x, you are good. If you get an error, go to python.org/downloads, download Python, and during install, make sure to tick "Add Python to PATH" — that checkbox matters.
 
----
+### Step 2 — Download this project
 
-### Step 2 — Download the project
+Click the green Code button at the top of this page, then Download ZIP, then extract it anywhere on your PC.
 
-Click the green **Code** button on this page → **Download ZIP** → Extract the folder anywhere on your PC.
-
-Or if you have Git:
+Or if you have Git installed:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/ReadyQueue.git
 cd ReadyQueue
 ```
 
----
-
-### Step 3 — Install the PDF library (one time only)
+### Step 3 — Install one library (just this once)
 
 ```bash
 pip install reportlab
 ```
 
-That's the only thing you need to install. Everything else is built into Python.
-
----
+This is only needed for the PDF export feature. Everything else is already part of Python — nothing else to install.
 
 ### Step 4 — Run the app
 
@@ -165,86 +124,91 @@ That's the only thing you need to install. Everything else is built into Python.
 python main.py
 ```
 
-The **ReadyQueue** window will open maximized with 4 sample processes already loaded.
-
-Click **▶ RUN SIMULATION** to see it in action immediately.
+That is it. The ReadyQueue window will open maximized with 4 sample processes already loaded so you can test it immediately.
 
 ---
 
-## 🎮 Quick Start Guide
+## First time using it? Start here
 
-Once the app is open:
-
-1. **Add processes** using the left panel — enter PID, Burst Time, Arrival Time, Priority
-2. **Select an algorithm** from the radio buttons (start with FCFS)
-3. **Click ▶ RUN SIMULATION**
-4. Watch the **Gantt chart** animate
-5. Read the **metrics table** below for waiting times and turnaround times
-6. Try **👣 Step Mode** to understand each scheduling decision one step at a time
-7. Go to the **Comparison tab** and click **Run All Algorithms** to see which is best
-8. Go to the **Synchronization tab** and try the **Deadlock** demo
-9. Click **📄 Export PDF Report** to save a full report
+1. The app opens with 4 sample processes already added — you do not need to type anything
+2. Make sure FCFS is selected on the left
+3. Click RUN SIMULATION
+4. Watch the Gantt chart draw itself
+5. Look at the metrics table below — it shows waiting time and turnaround time for each process
+6. Try Step Mode — this lets you go one step at a time and explains every decision
+7. Switch to the Comparison tab and click Run All Algorithms — see which one wins
+8. Go to the Synchronization tab and try the Deadlock demo — it is the most interesting one
+9. When you are done, click Export PDF Report to save everything as a PDF
 
 ---
 
-## ⚠️ Troubleshooting
+## Something not working?
 
-| Problem | Fix |
-|---------|-----|
-| `python` not recognized | Use `python3 main.py` instead, or reinstall Python with "Add to PATH" checked |
-| `ModuleNotFoundError: reportlab` | Run `pip install reportlab` in Command Prompt |
-| `ModuleNotFoundError: explainer` | Make sure all 6 `.py` files are in the same folder |
-| `ModuleNotFoundError: pdf_export` | Same as above — all files must be together |
-| Window doesn't open | Run from Command Prompt, not by double-clicking the file |
-| PDF opens blank | Run the simulation first before clicking Export |
-
----
-
-## 🛠️ Built With
-
-- **Python 3.14**
-- **tkinter** — built-in Python GUI library
-- **tkinter.ttk** — for the metrics table
-- **reportlab** — for PDF generation
-- **json** — for save/load functionality
-
-No frameworks. No installs beyond reportlab. Just Python.
+| Problem | What to do |
+|---------|------------|
+| python not recognized | Try python3 main.py or reinstall Python and check Add to PATH |
+| ModuleNotFoundError: reportlab | Run pip install reportlab in Command Prompt |
+| ModuleNotFoundError: explainer | All 6 .py files need to be in the same folder |
+| ModuleNotFoundError: pdf_export | Same — keep all files together in one folder |
+| Window does not appear | Do not double-click the file — run it from Command Prompt |
+| PDF is blank | You need to run a simulation first before exporting |
 
 ---
 
-## 📚 Algorithms Explained
+## The 6 algorithms — quick explanation
 
-| Algorithm | Type | Key Idea | Main Problem |
-|-----------|------|----------|--------------|
-| FCFS | Non-preemptive | First arrived = first served | Convoy effect |
-| SJF | Non-preemptive | Shortest burst runs next | Starvation of long jobs |
-| SRTF | Preemptive | Shortest *remaining* time wins | High context switches |
-| Round Robin | Preemptive | Everyone gets equal time slices | Performance depends on quantum size |
-| Priority | Non-preemptive | Lowest priority number runs first | Starvation |
-| Priority + Aging | Non-preemptive | Priority but waiting processes get boosted | More complex |
+| Algorithm | Simple explanation | The catch |
+|-----------|-------------------|-----------|
+| FCFS | First to arrive, first to run | Short jobs get stuck behind long ones |
+| SJF | Shortest job runs next | Long jobs might never run |
+| SRTF | If a shorter job arrives, it takes over immediately | Lots of context switches |
+| Round Robin | Everyone gets a turn, time slice by time slice | Depends heavily on quantum size |
+| Priority | Most urgent process runs first | Low priority jobs can starve |
+| Priority + Aging | Like Priority but waiting processes slowly move up | Slightly more complex |
 
----
 
-## 👤 Author
+## OS concepts you will actually understand after using this:
 
-**Mashrafe Bin Morshed**
-- Course: CSE323 — Operating Systems
-- Section: 02
-- ID: 2321889042
+- CPU Scheduling and how it works
+- Gantt Charts, Burst Time, Arrival Time
+- Waiting Time, Turnaround Time, Response Time
+- What preemptive vs non-preemptive actually means
+- Context Switching and why it has a cost
+- Starvation and how Aging fixes it
+- The Convoy Effect in FCFS
+- Time Quantum and why it matters in Round Robin
+- Mutex Locks and Critical Sections
+- Semaphores and Bounded Buffer
+- How a Deadlock forms and the 4 Coffman conditions
+- Race Conditions and why they are so dangerous
 
----
 
-## 📄 License
+## Tech used here:
 
-This project is for educational purposes.
-Feel free to use it, learn from it, and modify it.
+- Python 3.14 — everything is written in Python
+- tkinter — the built-in Python library for the GUI
+- tkinter.ttk — for the metrics table specifically
+- reportlab — the only external library, used for PDF export
+- json — for saving and loading process sets
 
----
+No web server. No database. No framework. Just Python running on your machine.
 
-## ⭐ If this helped you
 
-Give it a **star** on GitHub — it helps others find it too!
+## About
 
-```
-Built with Python 🐍 | Designed for OS students 🎓 | Made from scratch by a beginner 💪
-```
+Made by Mashrafe Bin Morshed
+
+I built this as a complete beginner to GUI programming. Every feature was something I had to figure out from scratch — the animations, the algorithms, the layout, the PDF export. If I can build it, you can understand it.
+
+
+## License
+
+Free to use for learning, studying, and modifying.
+Just do not copy it and claim it as your own work.
+
+
+## Found this useful?
+
+Leave a star — it helps other students find it.
+
+Built with Python | For OS students | By a beginner, for beginners
