@@ -8,7 +8,7 @@ Built with Python and tkinter — no frameworks, no extra installations, just pu
 
 ## Demo Video
 
-**[Watch it in action](YOUR_YOUTUBE_LINK_HERE)**
+https://youtu.be/KkBViHQYpYw
 
 
 ## What is this exactly?
