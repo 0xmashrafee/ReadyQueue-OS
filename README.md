@@ -11,8 +11,6 @@ Built with Python and tkinter — no frameworks, no extra installations, just pu
 **[Watch it in action](YOUR_YOUTUBE_LINK_HERE)**
 
 
----
-
 ## What is this exactly?
 
 You know how in OS class you have to manually draw Gantt charts and calculate waiting times by hand? This app does all of that for you — but animated, step by step, so you can actually see what the algorithm is doing and why.
@@ -51,7 +49,7 @@ And if you want to know which algorithm is best for your processes, the Comparis
 | Feature | What it does |
 |--------|-------------|
 | Mutex Lock Demo | Watch 3 threads fight over a lock — see who gets blocked and who gets in |
-| Producer / Consumer | A buffer fills up and empties live with semaphore logic |
+| Producer / Consumer | A buffer fills up, and empties live with semaphore logic |
 | Deadlock Demo | Watch two threads get stuck waiting on each other — circular wait animated |
 | Race Condition | See what happens when two threads write at the same time without sync |
 | Event Log | Every event logged with timestamps and colour coding |
@@ -87,7 +85,7 @@ ReadyQueue/
 
 ## How to run it
 
-Don't worry — it is easier than it looks. Just follow these steps one by one.
+It is easier than it looks. Just follow these steps one by one.
 
 ### Step 1 — Check if Python is installed
 
