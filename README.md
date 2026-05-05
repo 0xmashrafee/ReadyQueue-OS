@@ -27,7 +27,7 @@ And if you want to know which algorithm is best for your processes, the Comparis
 ### Scheduler Tab
 
 | Feature | What it does |
-
+|--------|-------------|
 | 6 Scheduling Algorithms | FCFS, SJF, SRTF, Round Robin, Priority, Priority + Aging |
 | Animated Gantt Chart | Draws the chart live, frame by frame, as the simulation plays |
 | Step-by-Step Explainer | Click Next Step, and it tells you exactly WHY that process was picked |
