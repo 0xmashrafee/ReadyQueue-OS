@@ -122,7 +122,7 @@ This is only needed for the PDF export feature. Everything else is already part 
 python main.py
 ```
 
-That is it. The ReadyQueue window will open maximized with 4 sample processes already loaded so you can test it immediately.
+That is it. The ReadyQueue window will open maximized with 4 sample processes already loaded, so you can test it immediately.
 
 ---
 
@@ -140,7 +140,7 @@ That is it. The ReadyQueue window will open maximized with 4 sample processes al
 
 ---
 
-## Something not working?
+## If something is not working?
 
 | Problem | What to do |
 |---------|------------|
@@ -153,7 +153,7 @@ That is it. The ReadyQueue window will open maximized with 4 sample processes al
 
 ---
 
-## The 6 algorithms — quick explanation
+## The 6 algorithms used here — quick explanation of all
 
 | Algorithm | Simple explanation | The catch |
 |-----------|-------------------|-----------|
@@ -165,7 +165,7 @@ That is it. The ReadyQueue window will open maximized with 4 sample processes al
 | Priority + Aging | Like Priority but waiting processes slowly move up | Slightly more complex |
 
 
-## OS concepts you will actually understand after using this:
+## OS concepts one will actually understand after using this:
 
 - CPU Scheduling and how it works
 - Gantt Charts, Burst Time, Arrival Time
@@ -194,7 +194,7 @@ No web server. No database. No framework. Just Python running on your machine.
 
 ## About
 
-Made by Mashrafe Bin Morshed
+Made by Mashrafe
 
 I built this as a complete beginner to GUI programming. Every feature was something I had to figure out from scratch — the animations, the algorithms, the layout, the PDF export. If I can build it, you can understand it.
 
@@ -207,6 +207,6 @@ Just do not copy it and claim it as your own work.
 
 ## Found this useful?
 
-Leave a star — it helps other students find it.
+Leave a star - it helps other students find it.
 
 Built with Python | For OS students | By a beginner, for beginners
